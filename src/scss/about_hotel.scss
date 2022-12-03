@@ -1,0 +1,88 @@
+@import './universal/colors';
+@import './universal/button';
+@import './universal/btns';
+@import './universal/menu_overlay';
+@import './universal/search_overlay';
+@import './universal/wrapper';
+@import './universal/section_header';
+@import './universal/footer';
+@import './universal/header';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about_hotel {
+    padding: 80px 0;
+    .hotels_list {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        .hotel {
+            width: 25%;
+            text-align: center;
+        }
+        img {
+            object-fit: cover;
+            border-radius: 8px;
+            width: 90%;
+        }
+    }
+    .img_wrapper {
+        padding: 4%;
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        background: #ECEBF9;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 65px;
+            height: 65px;
+        }
+    }
+    h2 {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 23px;
+        font-weight: 600;
+    }
+    .description {
+        margin-top: 15px;
+        text-align: justify;
+    }
+}
+
+
+
+@media (max-width:1199px) {
+}
+
+
+@media (max-width:991px) {
+    .about_hotel .hotels_list .hotel {
+        margin-top: 25px;
+        width: 50%;
+    }
+    .about_hotel .hotels_list {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:767px) {
+    .about_hotel .hotels_list .hotel {
+        width: 100%;
+    }
+}
+
+

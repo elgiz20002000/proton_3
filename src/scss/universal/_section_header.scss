@@ -1,0 +1,16 @@
+.section_header {
+    position: relative;
+    width: max-content;
+    h2 {
+        font-size: 21px;
+        font-weight: bold;
+    }
+    .line {
+        height: 4px;
+        width: 44%;
+        background: $main;
+    }
+    .description {
+        margin-top: 10px;
+    }
+}

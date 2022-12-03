@@ -1,0 +1,120 @@
+@import './universal/colors';
+@import './universal/button';
+@import './universal/menu_overlay';
+@import './universal/btns';
+@import './universal/search_overlay';
+@import './universal/wrapper';
+@import './universal/section_header';
+@import './universal/footer';
+@import './universal/header';
+@import './why_we';
+@import './special_offer';
+@import './video_bg';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+    .about_us {
+        padding: 40px 0;
+        .about_text {
+            padding-right: 5%;
+            width: 100%;
+
+        }
+    }
+.why_we {
+    padding: 80px 0;
+}
+.special_offer {
+    .section_wrapper {
+    justify-content: space-evenly;
+        .about_item {
+            text-align: center;
+            
+            .count_types {
+                margin-top: 5px;
+                font-size: 18px;
+                font-weight: 200;
+            }
+            .count {
+                font-weight: 700;
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+.icons {
+    padding: 80px 0;
+    .icons_wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(1) opacity(0.5);
+            transition: .3s all; 
+            cursor: pointer;
+            &:hover {
+                filter: grayscale(0) opacity(1);
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:1199px) {
+    .why_we .section_wrapper {
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width:991px) {
+
+
+    .why_we .section_wrapper {
+        flex-direction: column;
+        .item:nth-child(2) {
+            margin-top: 30px;
+        }
+    }
+    .why_we .section_wrapper .item:nth-child(1) .section_description {
+        padding-right: 0;
+    }
+    
+    .special_offer {
+        height: 75vh;
+       
+    }
+    .special_offer .section_wrapper {
+        flex-direction: column;
+    }
+    .why_we .counts {
+        padding-right: 0;
+    }
+}
+
+
+@media (max-width:767px) {
+ 
+}
+
+@media (max-width:576px) {
+    .special_offer {
+        min-height: 800px;
+    }
+    .why_we .counts img {
+        width: 35px;
+        height: 35px;
+    }
+  
+}
+
+

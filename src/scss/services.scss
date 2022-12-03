@@ -1,0 +1,78 @@
+@import './universal/colors';
+@import './universal/button';
+@import './universal/btns';
+@import './universal/menu_overlay';
+@import './universal/search_overlay';
+@import './universal/wrapper';
+@import './universal/section_header';
+@import './universal/footer';
+@import './universal/header';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.services {
+    padding: 80px 0;
+    .service_list {
+        display: flex;
+        flex-wrap: wrap ;
+        .service {
+            text-align: center;
+            margin-top: 30px;
+            width: 25%;
+            .img_wrapper {
+                padding: 5%;
+                margin: 0 auto;
+                width: 80px;
+                height: 80px;
+                background: #ECEBF9;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &_title {
+                margin-top: 15px;
+                font-weight: 600;
+            }
+            &_description {
+                margin-top: 15px;
+                padding: 0 10%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:1199px) {
+}
+
+
+@media (max-width:991px) {
+    .services .service_list .service_description {
+        padding: 0 11%;
+    }
+    .services .service_list .service {
+        width: 50%;
+    }
+}
+
+
+@media (max-width:767px) {
+
+}
+
+@media (max-width:576px) {
+    .services .service_list .service_description {
+        padding: 0 16%;
+    }
+    .services .service_list .service {
+        width: 100%;
+    }
+}
+
+

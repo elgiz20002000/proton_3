@@ -1,0 +1,157 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+@import './universal/colors';
+@import './universal/button';
+@import './universal/menu_overlay';
+@import './universal/btns';
+@import './universal/search_overlay';
+@import './universal/wrapper';
+@import './universal/section_header';
+@import './universal/footer';
+@import './universal/header';
+@import './popular_offers';
+@import './why_we';
+@import './special_offer';
+@import './choose_direction';
+@import './special_offer_2';
+@import './video_bg';
+@import './_hotels';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+
+@media (max-width:1199px) {
+
+    .choose_direction .selection_grid {
+        height: 50vh;
+    }
+    .why_we .section_wrapper {
+        padding: 80px 0;
+        align-items: center;
+    }
+    .special_offer_2 .cards_list , .hotels .cards_list , .popular_offers .cards_list {
+        flex-wrap: wrap;
+    }
+     .cards_list .card {
+        margin-top: 35px;
+    }
+    .popular_offers .cards_list .card {
+        min-height: 460px;
+        max-width: 30%;
+    }
+}
+
+
+@media (max-width:991px) {
+    .popular_offers .cards_list .card {
+        min-height: 560px;
+        max-width: 50%;
+    }
+    .special_offer_2 .cards_list, .hotels .cards_list, .popular_offers .cards_list {
+        flex-direction: column;
+    }
+    .why_we .section_wrapper {
+        flex-direction: column;
+        .item:nth-child(2) {
+            margin-top: 30px;
+        }
+    }
+    .why_we .section_wrapper .item:nth-child(1) .section_description {
+        padding-right: 0;
+    }
+    
+    .special_offer {
+        height: 75vh;
+        .section_wrapper {
+            .item {
+                text-align: center;
+                &:nth-child(2) {
+                    .description {
+                        padding-right: 0;
+                        padding: 0 5%;
+                    }
+                }
+            }
+        }
+       
+    }
+    .special_offer .section_wrapper {
+        flex-direction: column;
+    }
+    .why_we .counts {
+        padding-right: 0;
+    }
+}
+
+
+@media (max-width:767px) {
+    .special_offer_2 {
+        padding: 80px 0;
+    }
+    .choose_direction .selection_grid {
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3 , 1fr);
+        .item_2 , .item_1 , .item_3 {
+            height: 100%;
+        }
+    }
+    .popular_offers .cards_list .card {
+        max-width: 65%
+    }
+    header .top .top_nav .nav_wrapper .search::after {
+        top: 37%;
+    }
+    header .top .bottom_nav {
+        display: none;
+    }
+    header .top .top_nav .nav_wrapper .search {
+        width: 35%;
+    }
+
+    header .bottom form {
+        flex-direction: column;
+        align-items: center;
+    }
+    header .bottom form .input {
+        width: 75%;
+    }
+    header .bottom form button {
+        margin-top: 25px;
+        width: 50%;
+    }
+}
+
+@media (max-width:576px) {
+    .special_offer .section_wrapper .item:nth-child(2) .description {
+        padding: 0;
+    }
+    .special_offer .section_wrapper .item:nth-child(2) button {
+        width: 50%;
+    }
+    .special_offer .section_wrapper .item:nth-child(1) {
+        font-size: 150px;
+    }
+    .special_offer {
+        min-height: 800px;
+    }
+    .why_we .counts img {
+        width: 35px;
+        height: 35px;
+    }
+    .why_we .section_wrapper .item:nth-child(1) .section_description {
+        text-align: justify;
+    }
+    .popular_offers .cards_list .card {
+        max-width: 100%;
+    }
+  
+}
+
+
+
+

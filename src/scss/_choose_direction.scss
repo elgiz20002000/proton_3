@@ -1,0 +1,105 @@
+.choose_direction {
+    padding: 80px 0 0 0;
+    .selection_grid {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        height: 100vh;
+        .item_1 , .item_2 , .item_3 {
+            position: relative;
+            width: 100%;
+            height: 70%;
+        }
+        .item_1 , .item_3 {
+            display: flex;
+            flex-direction: column;
+            .item {
+                height: 50%;
+            }
+        }
+        .item_1 .item ,  .item_3 .item  , .item_2 {
+            overflow: hidden;
+            &:hover {
+                .about {
+                    transform: translate(-50% , -50%) scale(1);
+                }
+                .temperature {
+                    right: 15px;
+                    top: 15px;
+                }
+                .item_wrapper {
+                    background-color: rgba($color: #000000, $alpha: 0.3);
+                }
+            }
+        }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            .item {
+                position: relative;
+                &_wrapper {
+                    cursor: pointer;
+                    color: white;
+                    position: relative;
+                    top: 0%;
+                    left: 0%;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: #000000, $alpha: 0);
+                    transition: .4s all;
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    .about {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50% , -50%) scale(0);
+                        text-align: center;
+                        transition: .2s all;
+                        .country {
+                            color:#F6DE06;
+                            font-weight: 300;
+                        }
+                        .city {
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                    }
+                    .temperature {
+                        position: absolute;
+                        right: -30px;
+                        top: -30px;
+                        transition: .2s all;
+                        .degree {
+                            position: relative;
+                            &::after {
+                                right: -8px;
+                                position: absolute;
+                                content:'';
+                                width: 7px;
+                                height: 7px;
+                                border: 1px white solid;
+                                border-radius: 100%;
+                            }
+                        }
+                    }
+                    &.active_grid_item {
+                        .about {
+                            transform: translate(-50% , -50%) scale(1);
+                        }
+                        .temperature {
+                            right: 15px;
+                            top: 15px;
+                        }
+                            background-color: rgba($color: #000000, $alpha: 0.3);
+                    }
+                }
+            }
+    }
+}

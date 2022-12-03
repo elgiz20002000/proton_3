@@ -1,0 +1,228 @@
+@import './universal/colors';
+@import './universal/btns';
+@import './universal/menu_overlay';
+@import './universal/search_overlay';
+@import './universal/wrapper';
+@import './universal/section_header';
+@import './universal/footer';
+@import './universal/header';
+
+
+.tickets {
+    background:#F1F1F1;
+    padding: 80px 0;
+    .tickets_list {
+        flex-direction: column;
+        display: flex;
+        justify-content: center ;
+        align-items: space-between;
+        .ticket {
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            border-radius: 4px;
+            padding: 0 25px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            height: 130px;
+            .firm {
+                display: flex;
+                align-items:center; 
+                img {
+                    margin-right: 10px;
+                    width: 55px;
+                }
+            }
+            .name {
+                font-weight: 600;
+            }
+            .plane_name {
+                color: #8B8B8B;
+            }
+            .time_range {
+                .line {
+                    position: relative;
+                    margin: 0 15px;
+                    width: 180px;
+                    height: 3px;
+                    background: $main;
+                    &::after {
+                        content:'';
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-100%);
+                        width: 10px;
+                        height: 10px;
+                        background: $main;
+                        clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+                    }
+                }
+                display: flex;
+                align-items: center;
+                .start , .end {
+                    text-align: center;
+                    .time {
+                        font-size: 21px;
+                        font-weight: 600;
+                    }
+                    .location {
+                        color: #8B8B8B;
+                    }
+                }
+            }
+            .total_time_info {
+                .total_time {
+                    color: #8B8B8B;
+                }
+                .flight_details {
+                    font-weight: 300;
+                    color: #FDA231;
+                }
+            }
+            .price_info {
+                color:$main;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .buy_btn {
+                cursor: pointer;
+                width: 140px;
+                padding: 10px 0;
+                background: $main;
+                color: white;
+                border-radius: 4px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.news {
+    padding: 80px 0;
+    .news_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item {
+            position: relative;
+            img {
+                border-radius: 8px;
+                object-fit: cover;
+                height: 313px;
+                width: 90%;
+            }
+            .title {
+                margin-top: 15px;
+                font-weight: bold;
+            }
+            .description {
+                padding-right: 10%;
+                margin-top: 15px;
+            }
+            .read_more_btn {
+                margin-top: 15px;
+                cursor: pointer;
+                width: 140px;
+                padding: 10px 0;
+                border:1px $main solid;
+                color: black;
+                border-radius: 4px;
+                text-align: center;
+                transition: .4s all;
+                &:hover {
+                    background: $main;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1199px) {
+}
+
+
+@media (max-width:991px) {
+    .news .news_list {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .news .news_list .item {
+        margin-top: 40px;
+        width: 80%;
+        text-align: center;
+        .description {
+            padding-right: 0;
+        }
+        .info {
+            text-align: left;
+        }
+    }
+
+    .tickets .tickets_list .ticket {
+        flex-direction: column;
+        padding: 15px 25px;
+        height: max-content;
+        width: max-content;
+        margin: 0 auto;
+        margin-top: 30px;
+
+        .firm {
+            flex-direction: column;
+            img {
+                margin-right: 0;
+                width: 100px;
+            }
+            &_info {
+                text-align: center;
+            }
+        }
+        .time_range {
+            margin-top: 15px;
+        }
+        .total_time_info {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .price_info {
+            margin-top: 15px;
+        }
+        .buy_btn {
+            margin-top: 15px;
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+   
+
+
+}
+
+@media (max-width:576px) {
+    .news .news_list .item {
+        width: 100%;
+        text-align: center;
+        .description {
+            padding-right: 0;
+        }
+        .info {
+            text-align: center;
+        }
+        .read_more_btn {
+            margin: 15px auto;
+        }
+    }
+    .tickets .tickets_list .ticket {
+        width: 100%;
+        .time_range {
+            width: 100%;
+        }
+    }
+}
+
+

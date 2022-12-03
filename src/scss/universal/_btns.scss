@@ -1,0 +1,19 @@
+.btns {
+    z-index: 1;
+    position: absolute;
+    display: none;
+    right: 10px;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column-reverse;
+    .search {
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width:767px) {
+    .btns {
+        display: flex;
+    }
+}
