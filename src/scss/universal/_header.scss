@@ -42,29 +42,43 @@ header {
         .top_nav {
             .nav_wrapper {
                 display: flex;
-            justify-content: flex-end;
-            align-items:baseline;
+                justify-content: flex-end;
+                align-items:baseline;
             .socials {
                 margin-right: 15px;
                 display: flex;
+                height: 30px;
                 .social {
+                    height: 100%;
                     margin-right: 10px;
-                    width: 18px;
-                    height: 18px;
+                    a {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
                 }
             }
             .language_btn select {
+                color:white;
+                option {
+                    color:black;
+                }
                 cursor: pointer;
                 margin-right: 20px;
                 outline: none;
                 background: transparent;
-                color: white;
                 border: none;
             }
             .search {
                 text-align: right;
                 width: 15%;
                 &::after {
+                    cursor: pointer;
                     content: url('../icon/search-svgrepo-com.svg');
                     position: absolute;
                     right: 1%;
@@ -200,9 +214,7 @@ header {
 }
 
 @media (max-width:1199px) {
-    // header .top .bottom_nav nav {
-    //     width: 90%;
-    // }
+
     header .top .top_nav .nav_wrapper .search {
         width: 20%;
     }
@@ -215,10 +227,23 @@ header {
     header .bottom form .input {
         width: 25%;
     }
-}
+    header .middle {
+        top: 33%;
+    }
+    header .bottom form .input:nth-child(1) input {
+        border-radius:4px;
+    }
+    header .bottom form .input input {
+        padding: 3px 10px 3px 45px;
+        border-radius: 4px;
+    }
+    header .top {
+        justify-content: center;
+    }
+    header .top .nav {
+        display: none;
+    }
 
-
-@media (max-width:767px) {
 
     header .top .top_nav .nav_wrapper .search::after {
         top: 37%;
@@ -245,16 +270,42 @@ header {
 
 
 @media (max-width:767px) {
-    header .middle {
-        top: 33%;
-    }
-    header .bottom form .input input {
-        padding: 5px 10px 5px 45px;
-    }
-    header .top {
-        justify-content: center;
-    }
-    header .top .nav {
-        display: none;
-    }
+
+    // header .top .top_nav .nav_wrapper .search::after {
+    //     top: 37%;
+    // }
+    // header .top .bottom_nav {
+    //     display: none;
+    // }
+    // header .top .top_nav .nav_wrapper .search {
+    //     width: 35%;
+    // }
+
+    // header .bottom form {
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+    // header .bottom form .input {
+    //     width: 75%;
+    // }
+    // header .bottom form button {
+    //     margin-top: 25px;
+    //     width: 50%;
+    // }
+}
+
+
+@media (max-width:576px) {
+    // header .middle {
+    //     top: 33%;
+    // }
+    // header .bottom form .input input {
+    //     padding: 5px 10px 5px 45px;
+    // }
+    // header .top {
+    //     justify-content: center;
+    // }
+    // header .top .nav {
+    //     display: none;
+    // }
 }

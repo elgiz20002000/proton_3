@@ -54,7 +54,7 @@
         display: flex;
         justify-content: center;
         img {
-            width: 100%;
+            width: 200px;
             height: 100%;
             filter: grayscale(1) opacity(0.5);
             transition: .3s all; 
@@ -107,6 +107,13 @@
 }
 
 @media (max-width:576px) {
+    .icons {
+        padding: 50px 0;
+    }
+    .icons .icons_wrapper img {
+        width: 50%;
+        margin: 0 auto;
+    }
     .special_offer {
         min-height: 800px;
     }

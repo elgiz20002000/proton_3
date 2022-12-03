@@ -6,14 +6,24 @@
         justify-content: space-between;
         .card {
             position: relative;
+            .img_wrapper {
+                overflow: hidden;
+            }
             img {
                 border-radius: 4px 4px 0 0;
                 width: 300px;
                 height: 350px;
                 object-fit: cover;
+                cursor: pointer;
+                transition: .3s all;
+                &:hover {
+                    transform: scale(1.5);
+                }
             }
+                
             &.special {
                 &::before {
+                    z-index: 1000;
                     top: -5%;
                     position: absolute;
                     left: 50%;

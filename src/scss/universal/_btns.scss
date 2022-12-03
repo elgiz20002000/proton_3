@@ -3,16 +3,16 @@
     position: absolute;
     display: none;
     right: 10px;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column-reverse;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 95%;
     .search {
         margin-top: 15px;
     }
 }
 
 
-@media (max-width:767px) {
+@media (max-width:991px) {
     .btns {
         display: flex;
     }

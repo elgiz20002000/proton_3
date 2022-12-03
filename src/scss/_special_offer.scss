@@ -44,6 +44,11 @@
                     background:transparent;
                     border: 2px white solid;
                     border-radius: 4px;
+                    transition: .3s all;
+                    &:hover {
+                        background: white;
+                        color:black;
+                    }
 
                 }
             }

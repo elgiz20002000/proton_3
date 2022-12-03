@@ -1,5 +1,6 @@
 @import './universal/colors';
 @import './universal/btns';
+@import './universal/button';
 @import './universal/menu_overlay';
 @import './universal/search_overlay';
 @import './universal/wrapper';
@@ -94,6 +95,10 @@
                 color: white;
                 border-radius: 4px;
                 text-align: center;
+                transition: .3s all;
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
@@ -106,12 +111,22 @@
         justify-content: space-between;
         align-items: center;
         .item {
+            cursor: pointer;
             position: relative;
+            .img_wrapper {
+                overflow: hidden;
+                width: 90%;
+                border-radius: 8px;
+            }
             img {
                 border-radius: 8px;
                 object-fit: cover;
                 height: 313px;
-                width: 90%;
+                width: 100%;
+                transition: .3s all;
+                &:hover {
+                    transform: scale(1.5);
+                }
             }
             .title {
                 margin-top: 15px;
