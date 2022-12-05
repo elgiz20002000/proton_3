@@ -1,4 +1,25 @@
+
 header {
+    overflow: hidden;
+    .bg_slider {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            width: 100%;
+            height: 100% !important;
+            filter: brightness(0.6);
+            object-fit: cover;
+        } 
+        .slick-track {
+            height: 100%;
+        }
+        .slick-list.draggable {
+            height: 100%;
+        }
+    }
     padding: 10px 0 25px;
     width: 100%;
     height: 80vh;
@@ -52,14 +73,20 @@ header {
                     height: 100%;
                     margin-right: 10px;
                     a {
+                        text-decoration: none;
+                        color:white;
                         height: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        img {
-                            width: 18px;
-                            height: 18px;
+                        i {
+                            font-size: 18px;
+                            transition: .3s all;
+                            &:hover {
+                                color:$main
+                            }
                         }
+
                     }
                 }
             }
@@ -85,6 +112,7 @@ header {
                     top: 10%;
                 }
             }
+
             input {
                 outline: none;
                 width: 100%;
@@ -173,7 +201,7 @@ header {
                 input {
                     border: none;
                     border-right: 1px #DFDFDF solid;
-                    color: #636c72 ;
+                    color: #636c72;
                 }
                 input[type="date"]::-webkit-calendar-picker-indicator {
                     cursor: pointer;

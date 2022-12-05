@@ -1,5 +1,6 @@
 @import "./universal/colors";
 @import './universal/btns';
+@import './universal/top_navbar';
 @import './universal/button';
 @import './universal/menu_overlay';
 @import './universal/search_overlay';
@@ -17,6 +18,11 @@
 
 .tours {
     padding:80px 0;
+    img[alt=tour] {
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+    }
     .tours_wrapper {
         display: flex;
         justify-content: space-between;
@@ -94,6 +100,10 @@
                     border-radius: 4px;
                     padding: 15px 0;
                     width: 100%;
+                    transition: .3s all;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
             .search_filter {

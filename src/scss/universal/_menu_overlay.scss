@@ -3,7 +3,7 @@
     display: none;
 }
 .menu_overlay {
-    z-index: 10;
+    z-index: 10000000;
     visibility: hidden;
     opacity: 0;
     position: fixed;
@@ -12,13 +12,14 @@
     top: 0;
     left: 0;
     background: $main ;
-    transition: .6s opacity , visibility , transform;
+    transition: .4s all;
 
     nav {
         display: block;
         width: 100%;
         height: 100%;
         ul {
+            padding-left: 0;
             width: 100%;
             position: absolute;
             left: 50%;

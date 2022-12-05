@@ -1,5 +1,6 @@
 @import "./universal/colors";
 @import './universal/btns';
+@import './universal/top_navbar';
 @import './universal/button';
 @import './universal/menu_overlay';
 @import './universal/search_overlay';
@@ -127,6 +128,13 @@
 }
 
 @media (max-width: 991px) {
+  .news .news_list .img_wrapper {
+    width: 100%;
+  }
+  .news .news_description {
+    width: 100%;
+  }
+
   .news .news_list {
     flex-direction: column;
     .news {

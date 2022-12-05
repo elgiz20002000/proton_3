@@ -1,7 +1,9 @@
 import { Video } from "./video.js";
 import { btns } from "./btns.js";
+import {top_nav} from './top_nav.js'
 
 
+top_nav()
 btns()
 $('.about_item .count span').countUp();
 $('.count_info .count ').countUp();

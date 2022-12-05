@@ -1,7 +1,17 @@
 import { btns } from "./btns.js";
+import { top_nav } from "./top_nav.js";
 import { Video } from "./video.js";
 
 $(".count_info .count").countUp();
+$('.bg_slider').slick({
+  arrows:false,
+  dots:false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
 
 if (document.body.getBoundingClientRect().width <= 767) {
   window.addEventListener("scroll", () => {
@@ -20,3 +30,4 @@ if (document.body.getBoundingClientRect().width <= 767) {
 
 btns();
 Video();
+top_nav()

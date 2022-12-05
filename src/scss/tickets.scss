@@ -1,5 +1,6 @@
 @import './universal/colors';
 @import './universal/btns';
+@import './universal/top_navbar';
 @import './universal/button';
 @import './universal/menu_overlay';
 @import './universal/search_overlay';
@@ -214,7 +215,9 @@
 
 @media (max-width:767px) {
    
-
+.img_wrapper {
+    margin: 0 auto;
+}
 
 }
 
