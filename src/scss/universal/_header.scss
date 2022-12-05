@@ -104,6 +104,7 @@ header {
             .search {
                 text-align: right;
                 width: 15%;
+                
                 &::after {
                     cursor: pointer;
                     content: url('../icon/search-svgrepo-com.svg');
