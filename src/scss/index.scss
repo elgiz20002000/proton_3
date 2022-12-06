@@ -31,7 +31,21 @@ header {
     background: none;
 }
 
+@media (max-width:1399px) {
+    .special_offer_2 .cards_list .card {
+        margin-right: 15px;
+    }
+    .hotels .cards_list .card {
+        margin-right: 15px;
+    }
+}
 @media (max-width:1199px) {
+    .special_offer_2 .cards_list .card {
+        margin-right: 0;
+    }
+    .hotels .cards_list .card {
+        margin-right: 0;
+    }
 
     .choose_direction .selection_grid {
         height: 50vh;

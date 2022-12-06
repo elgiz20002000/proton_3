@@ -2,6 +2,8 @@
     .section_wrapper {
         display: flex;
         .item {
+            height: max-content;
+
             img[alt=pause] {
                 display: none;
             }
